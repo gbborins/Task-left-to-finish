@@ -1,0 +1,75 @@
+.division1{
+background-color:rgb(11, 47, 114);
+width:240px;
+height:150px;
+border-radius: 10px;
+color:white;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:25px;}
+.con{
+    width:300px;
+    height:400px;
+    background-color: white;
+    position: relative;
+    left:-8px;
+    top:10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f0f0f0;}
+    .pen{
+    width:300px;
+    height:400px;
+    background-color: white;
+    position: relative;
+    left:300px;
+    top:-390px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f0f0f0;}
+    #concluid{
+    border-radius: 10px;
+    font: normal 30px Arial;
+    display:flex;
+    align-items:center;
+    }
+    #input-concluid{
+    left:180px;
+    position:relative;
+    width: 30px;
+    height:30px;
+    border-radius: 50px;
+    }
+    #pendent{
+    border-radius: 10px;
+    font: normal 30px Arial;
+    display: flex;
+    align-items: center;
+    }
+    .task{
+    font:normal 15px Arial;
+    }
+    .title{
+        text-transform:uppercase;
+        color:red;}
+    .title2{
+        text-transform:uppercase;
+        color:green;}
+    h2{
+    text-transform:lowercase;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:black;} 
+    .input-text{
+    background-color:black;
+    color:white;
+    }
+    .send{
+        background-color:black;
+        color:gray; 
+    }
