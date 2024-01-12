@@ -1,37 +1,36 @@
 const task = document.querySelector('.input-text')
 const send = document.querySelector('.send')
-const concluid1 = document.querySelector('.textb1')
-const concluid2 = document.querySelector('.textb2')
-const concluid3 = document.querySelector('.textb3')
-const concluid4 = document.querySelector('.textb4')
-const concluid5 = document.querySelector('.textb5')
-const concluid6 = document.querySelector('.textb6')
-const pendent1 = document.querySelector('.textc1')
-const pendent2 = document.querySelector('.textc2')
-const pendent3 = document.querySelector('.textc3')
-const pendent4 = document.querySelector('.textc4')
-const pendent5 = document.querySelector('.textc5')
-const pendent6 = document.querySelector('.textc6')
-const box1 = document.querySelector('.box1')
-const box2 = document.querySelector('.box2')
-const box3 = document.querySelector('.box3')
-const box4 = document.querySelector('.box4')
-const box5 = document.querySelector('.box5')
-const box6 = document.querySelector('.box6')
-const box7 = document.querySelector('.box7')
-const box8 = document.querySelector('.box8')
-const box9 = document.querySelector('.box9')
-const box10 = document.querySelector('.box10')
+const pen = document.querySelector('.task-container')
+const con = document.querySelector('.title2')
+var i = 0
 send.addEventListener("click", resp);
+send.addEventListener("keypress", resp)
+
 function resp() {
-    if(pendent1.innerHTML == "1"){
-    pendent1.innerHTML = task.value;}
-    else if(pendent1.innerHTML !== "1" && pendent2.innerHTML == "2"){
-        pendent2.innerHTML = task.value;
-    }else if(pendent2.innerHTML !== "2" && pendent3.innerHTML == "3"){
-        pendent3.innerHTML = task.value;
-   }else if(pendent3.innerHTML !== "3" && pendent4.innerHTML == "4"){
-            pendent4.innerHTML = task.value;
-        }else if(pendent4.innerHTML !== "4" && pendent5.innerHTML == "5"){
-                pendent5.innerHTML = task.value;}
-    }
+    let pa = document.createElement('h2');
+    pa.innerHTML = task.value;
+    pen.appendChild(pa);
+    let ta1 = document.createElement('button');
+    let im1 = document.createElement('img');
+    ta1.type = "button";
+    ta1.id = "input-concluid";
+    pa.appendChild(ta1);
+    im1.src = "https://i.pinimg.com/originals/47/05/a8/4705a8ab7c03092ef04ec4ec578493e1.jpg";
+    im1.className = "image"
+    ta1.appendChild(im1);
+    let ta2 = document.createElement('button')
+    let im2 = document.createElement('img')
+    ta2.type = "button";
+    ta2.id = "input-concluid";
+    pa.appendChild(ta2);
+    im2.src = "https://i.pinimg.com/originals/74/e0/8b/74e08b79ca412fb2462f7a7500cf91f8.jpg";
+    im2.className = "image";
+    ta2.appendChild(im2);
+    let ta3 = document.createElement('button')
+    let im3 = document.createElement('img')
+    ta3.type = "button";
+    ta3.id = "input-concluid";
+    pa.appendChild(ta3);
+    im3.src = "https://i.pinimg.com/736x/34/f3/b1/34f3b1a55e5e38f6c50910300fbd5639.jpg";
+    im3.className = "image";
+    ta3.appendChild(im3)}
