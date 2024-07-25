@@ -1,37 +1,33 @@
 const task = document.querySelector('.input-text')
 const send = document.querySelector('.send')
-const pen = document.querySelector('.task-container')
-const con = document.querySelector('.title2')
+const Pendent = document.querySelector('.Task-Pen')
+const Concluided = document.querySelector('.Task-Con')
 var i = 0;
-var pa = {
-    datapas : function(pas){
-    return pa[i] = pas}};
-    //Here will stay stored the h2 element and every attributes that it has
-var right = {
-    eventright: function(){},
-    dataright : function(rights){
-    return right[i] = rights},};
-    //Here will stay stored the button right with im1 insert in him how appendChild and his attributes
-var im1 = {
-    dataim1 : function(im1s){
-    return im1[i] = im1s}};
-    //This is the stock of im1
-var edit = {
-    dataedit : function(edits){
-    return edit[i] = edits}};
-    //Here will stay stored the button edit with im2 insert in him how appendChild and his attributes
-var im2 = {
-    dataim2 : function(im2s){
-    return im2[i] = im2s}};
-    //This is the stock of im2
-var era = {
-    dataera : function(eras){
-    return era[i] = eras}};
-//Here will stay stored the button era with im3 insert in him how appendChild and his attributes
-var im3 = {
-    dataim3 : function(im3s){
-    return im3[i] = im3s}};
-    //This is the stock of im2
+var DataFunction = {
+    DataText : function(ElementText){
+        if(typeof DataFunction[i] !== 'object' || DataFunction[i] === null){
+        DataFunction[i] = {}}
+       return DataFunction[i].ElementText = ElementText},
+    DataRight : function(ElementRight){
+        return DataFunction[i].ElementRight = ElementRight},
+    DataIm1 : function(im1s){
+        return DataFunction[i].im1s = im1s},
+    DataEdit : function(ElementEdit){
+        return DataFunction[i].ElementEdit = ElementEdit},
+    DataIm2 : function(im2s){
+        return DataFunction[i].im2s = im2s},
+    DataErase : function(ElementErase){
+        return DataFunction[i].ElementErase = ElementErase},
+    DataIm3 : function(im3s){
+        return DataFunction[i].im3s = im3s},
+}
+var ConfirmButton = (i) => {
+    return function(){
+    Concluided.appendChild(DataFunction[i].ElementText);
+    Concluided.appendChild(DataFunction[i].ElementRight);
+    Concluided.appendChild(DataFunction[i].ElementEdit);
+    Concluided.appendChild(DataFunction[i].ElementErase);}}
+//this code set will add the h2 and buttons to the div "Concluided"
 send.addEventListener("click", resp);
 //This event will activate if you press the button "to send"
 document.addEventListener("keypress", function(a){
@@ -45,46 +41,43 @@ document.addEventListener("keypress", function(a){
     } task.value += String.fromCharCode(a.keyCode)
 })
 //The event will get every key that you pressed, remove the Default of them and add the key pressed to the "write yout task"
-document.addEventListener('keydown', function(c){
-if(c.code === "Backspace"){
+document.addEventListener('keydown', function(BackSpaceKey){
+if(BackSpaceKey.code === "Backspace"){
 task.value = task.value.slice(0, -1);
-c.preventDefault();
+BackSpaceKey.preventDefault();
 }
 })
 //This event is diferent of previous because the key backspace don't act like the others
 function resp() {
-    pa[i] = document.createElement('h2');
-    pa[i].innerHTML = task.value;
-    pen.appendChild(pa[i]);
-    pa.datapas(pa[i])
-    right[i] = document.createElement('button');
-    im1[i] = document.createElement('img')
-    right[i].type = "button";
-    right[i].id = "input-concluid";
-    pen.appendChild(right[i]);
-    right.dataright(right[i])
-    im1[i].src = "https://i.pinimg.com/originals/47/05/a8/4705a8ab7c03092ef04ec4ec578493e1.jpg";
-    im1[i].className = "image"
-    right[i].appendChild(im1[i]);
-    edit[i] = document.createElement('button');
-    im2[i] = document.createElement('img')
-    edit[i].type = "button";
-    edit[i].id = "input-concluid";
-    pen.appendChild(edit[i]);
-    im2[i].src = "https://i.pinimg.com/originals/74/e0/8b/74e08b79ca412fb2462f7a7500cf91f8.jpg";
-    im2[i].className = "image";
-    edit[i].appendChild(im2[i]);
-    era[i] = document.createElement('button')
-    im3[i] = document.createElement('img')
-    era[i].type = "button";
-    era[i].id = "input-concluid";
-    pen.appendChild(era[i]);
-    im3[i].src = "https://i.pinimg.com/736x/34/f3/b1/34f3b1a55e5e38f6c50910300fbd5639.jpg";
-    im3[i].className = "image";
-    era[i].appendChild(im3[i]);
-    task.value = ""
-    right[i].addEventListener("click", function(a){
-        return function(){console.log(`you click in the ${a} right button`)}}(i+1))
+    DataFunction.DataText(document.createElement('h2'));
+    DataFunction[i].ElementText.innerHTML = task.value
+    Pendent.appendChild(DataFunction[i].ElementText);
+    DataFunction.DataRight(document.createElement('button'));
+    DataFunction.DataIm1(document.createElement('img'));
+    DataFunction[i].ElementRight.type = "button";
+    DataFunction[i].ElementRight.id = "input-image";
+    Pendent.appendChild(DataFunction[i].ElementRight);
+    DataFunction[i].im1s.src = "https://i.pinimg.com/originals/47/05/a8/4705a8ab7c03092ef04ec4ec578493e1.jpg";
+    DataFunction[i].im1s.className = "image";
+    DataFunction[i].ElementRight.appendChild(DataFunction[i].im1s);
+    DataFunction.DataIm2(document.createElement('img'));
+    DataFunction.DataEdit(document.createElement('button'));
+    DataFunction[i].ElementEdit.type = "button";
+    DataFunction[i].ElementEdit.id = "input-image";
+    Pendent.appendChild(DataFunction[i].ElementEdit);
+    DataFunction[i].im2s.src = "https://i.pinimg.com/originals/74/e0/8b/74e08b79ca412fb2462f7a7500cf91f8.jpg";
+    DataFunction[i].im2s.className = "image";
+    DataFunction[i].ElementEdit.appendChild(DataFunction[i].im2s);
+    DataFunction.DataErase(document.createElement('button'));
+    DataFunction.DataIm3(document.createElement('img'));
+    DataFunction[i].ElementErase.type = "button";
+    DataFunction[i].ElementErase.id = "input-image";
+    Pendent.appendChild(DataFunction[i].ElementErase);
+    DataFunction[i].im3s.src = "https://i.pinimg.com/736x/34/f3/b1/34f3b1a55e5e38f6c50910300fbd5639.jpg";
+    DataFunction[i].im3s.className = "image";
+    DataFunction[i].ElementErase.appendChild(DataFunction[i].im3s);
+    task.value = "";
+    DataFunction[i].ElementRight.addEventListener("click", ConfirmButton(i));
     return i++
     } 
-//this code set will create and add the h2 and buttons to the div "Pedent"
+//this code set will create and add the h2 and buttons to the div "Pendent"

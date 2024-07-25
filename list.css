@@ -17,7 +17,7 @@
         scrollbar-width: thin;}
         .con{
         top:10px;}
-        #input-concluid{
+        #input-image{
         position:relative;
         width: 30px;
         height:30px;
@@ -28,17 +28,17 @@
         font:normal 20px bold;
         }
         .title{
-            text-transform:uppercase;
-            color:red;
+        text-transform:uppercase;
+        color:red;
         font-size: 200%;
         position:relative;
         top:-15px;}
         .title2{
-            text-transform:uppercase;
-            color:green;
-            font-size: 200%;
-            position:relative;
-            top:-15px;}
+        text-transform:uppercase;
+        color:green;
+        font-size: 200%;
+        position:relative;
+        top:-15px;}
         h2{
         border-radius: 10px;
         font: normal 30px Arial;
